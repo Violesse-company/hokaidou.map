@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>サーバーに接続できません</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background: #ffffff;
+    color: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+  }
+
+  .container {
+    max-width: 500px;
+  }
+
+  h1 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #000000;
+  }
+
+  p {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background: #ff5c5c;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  button:hover {
+    background: #ff1f1f;
+  }
+
+  .loader {
+    margin: 20px auto;
+    width: 50px;
+    height: 50px;
+    border: 5px solid rgba(255,255,255,0.2);
+    border-top: 5px solid #ff5c5c;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+
+  @keyframes spin {
+    to { transform: rotate(360deg); }
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <h1>サーバーに接続できません</h1>
+    <p>札幌お店マップ.comのサーバーに接続できません。<br>インターネット接続を確認してください。</p>
+    <div class="loader"></div>
+    <button id="connectBtn">再接続</button>
+
+<script>
+  // アップデート完了フラグ（trueなら通常サイトへ飛ぶ）
+  const updateFinished = true; // ← アップデート中はfalseに設定　アップデート完了後にtrueに変更
+
+  document.getElementById('connectBtn').addEventListener('click', () => {
+    if (updateFinished) {
+      // アップデート完了 → 通常サイトにリダイレクト
+    window.location.href = "sinsei.html";
+    } else {
+      // まだアップデート中 → 画面を維持
+      alert("アップデート中です。もう少しお待ちください。");
+    }
+  });
+</script>
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,63 @@
+[
+  { 
+  "name": "カフェ札幌A",
+  "lat": 43.069,
+  "lng": 141.351,
+  "category": "カフェ",
+  "details": "落ち着いた雰囲気のカフェ",
+  "service": "親切な接客",
+  "hours": "9:00〜23:00",
+  "holiday": ["日"],
+  "rating": 4.5,
+  "url": "https://example.com/cafeA" 
+  },
+  { 
+  "name": "ラーメン店B",
+  "lat": 43.067,
+  "lng": 141.349,
+  "category": "ラーメン",
+  "details": "人気味噌ラーメン店",
+  "service": "混んでいるが素早い対応",
+  "hours": "9:00〜18:00",
+  "holiday": ["月"],
+  "rating": 4.0,
+  "url": "https://example.com/ramenB" 
+  },
+  { 
+  "name": "本屋C",
+  "lat": 43.068,
+  "lng": 141.348,
+  "category": "本屋",
+  "details": "品揃え豊富な書店",
+  "service": "スタッフ親切",
+  "hours": "9:00〜18:00",
+  "holiday": ["火", "金"],
+  "rating": 3.2,
+  "url": "https://example.com/bookC" 
+  },
+  { 
+  "name": "カフェD",
+  "lat": 43.066,
+  "lng": 141.352,
+  "category": "カフェ",
+  "details": "手作りケーキが美味しい",
+  "service": "フレンドリー",
+  "hours": "9:00〜23:00",
+  "holiday": ["水"],
+  "rating": 2.8,
+  "url": "https://example.com/cafeD" 
+  },
+{
+  "name": "BURST LIMIT",
+  "address": "",
+  "lat": 43.109741267002,
+  "lng": 141.345422565937,
+  "category": "ジム",
+  "details": "パワーリフティング専門ジムです",
+  "service": "軽い補助トレーニングを教えていただきました！",
+  "hours": "14:00~0:00",
+  "holiday": ["水"],
+  "rating": 4,
+  "url": ""
+}
+]

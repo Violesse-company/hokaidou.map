@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>管理者画面 - 札幌お店マップ</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- ログイン画面 -->
+  <div id="loginScreen">
+    <h2>管理者ログイン</h2>
+    <input type="email" id="adminEmail" placeholder="メール">
+    <input type="password" id="adminPassword" placeholder="パスワード">
+    <button id="loginBtn">ログイン</button>
+    <p id="loginMsg" style="color:red;"></p>
+  </div>
+
+  <!-- 管理画面 -->
+  <div id="adminScreen" style="display:none;">
+    <header>
+      <h2>管理者画面</h2>
+      <button id="logoutBtn">ログアウト</button>
+    </header>
+    <table id="shopTable">
+      <thead>
+        <tr>
+          <th>店名</th>
+          <th>カテゴリ</th>
+          <th>営業時間</th>
+          <th>定休日</th>
+          <th>詳細</th>
+          <th>接客</th>
+          <th>評価</th>
+          <th>URL</th>
+          <th>操作</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+  <script src="admin.js"></script>
+</body>
+</html>

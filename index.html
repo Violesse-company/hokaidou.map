@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>札幌お店マップ</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
+  <!-- Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+</head>
+<body>
+  <header>
+    <h1>札幌周辺のお店マップ</h1>
+  </header>
+
+  <div class="controls">
+    <input type="text" id="searchInput" placeholder="店名で検索">
+    <select id="filterSelect">
+      <option value="all">全ての評価</option>
+      <option value="2">評価2</option>
+      <option value="3">評価3</option>
+      <option value="4">評価4</option>
+      <option value="5">評価5</option>
+    </select>
+    <select id="categorySelect">
+      <option value="all">全てのカテゴリ</option>
+      <option value="カフェ">カフェ</option>
+      <option value="ラーメン">ラーメン</option>
+      <option value="本屋">本屋</option>
+      <option value="ジム">ジム</option>
+      <option value="フィットネス">フィットネス</option>
+      <option value="ショッピングモール">ショッピングモール</option>
+      <option value="お土産屋さん">お土産屋さん</option>
+      <option value="その他">その他</option>
+    </select>
+    <button id="locateBtn">現在地</button>
+  </div>
+
+  <main>
+    <div id="map"></div>
+  </main>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

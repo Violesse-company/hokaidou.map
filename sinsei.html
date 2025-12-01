@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>店舗情報申請フォーム</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="sinsei.css" />
+
+  <!-- Leaflet -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+  <!-- Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore-compat.js"></script>
+</head>
+<body>
+  <h2>店舗情報申請フォーム</h2>
+  <h4>AppleのマップとGoogleマップで運営者が確認の上評価2以上の店舗を承諾します。</h4>
+  <form id="shopForm">
+  <input type="text" id="name" placeholder="店名" required />
+  <div id="map" style="height:300px;"></div>
+  <input type="text" id="lat" placeholder="緯度" readonly />
+  <input type="text" id="lng" placeholder="経度" readonly />
+  <select id="category">
+    <option>カフェ</option>
+    <option>ラーメン</option>
+    <option>本屋</option>
+    <option>ジム</option>
+    <option>フィットネス</option>
+    <option>ショッピングモール</option>
+    <option>お土産屋さん</option>
+    <option>その他</option>
+  </select>
+  <textarea id="details" placeholder="店舗の説明"></textarea>
+  <textarea id="service" placeholder="お客様の接客"></textarea>
+  <input type="text" id="hours" placeholder="営業時間 例:9:00~18:00" />
+  <input type="text" id="holiday" placeholder="定休日 例:月,水" />
+  <input type="number" id="rating" placeholder="評価 0~5" min="0" max="5" />
+  <input type="text" id="url" placeholder="店のURL" />
+  <button type="button" id="send">申請する</button>
+</form>
+  <!-- JS -->
+  <script src="sinsei.js"></script>
+</body>
+</html>
